@@ -15,8 +15,8 @@ This project is a simple VR environment map with depth estimation, featuring AI-
 To get started with this project, simply clone this repository and run `npm install` to install the necessary dependencies. Then run `npm run dev` to start the development server.
 
 ```bash
-git clone https://github.com/<your-username>/<your-repo-name>.git
-cd <your-repo-name>
+git clone https://github.com/kessoning/ai_environmental_map_webgl.git
+cd ai_environmental_map_webgl
 npm install
 npm run dev
 ```
@@ -35,3 +35,4 @@ This project is licensed under the MIT License. See the LICENSE file for more in
 - MiDaS for depth map estimation
 - WebGL and Three.js for building the project
 - Vite for bundling the project
+- Environment Maps from Stable Diffusion still experimental
