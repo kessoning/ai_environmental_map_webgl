@@ -1,16 +1,15 @@
-import "../style/style.css";
+import "./style.css";
 
 import * as THREE from "three";
-import { VRButton } from "three/addons/webxr/VRButton";
-import { OrbitControls } from "three/addons/controls/OrbitControls";
+import { VRButton } from "three/addons/webxr/VRButton.js";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
 // File list
-import Files from "./files";
+import Files from "./js/files.js";
 
 let camera, controls;
 let scene, renderer;
 let sphere;
-let clock;
 
 if (init()) {
   renderer.setAnimationLoop(render);
@@ -19,13 +18,17 @@ if (init()) {
 function init() {
   const container = document.getElementById("container");
 
-  clock = new THREE.Clock();
+  //
 
   scene = new THREE.Scene();
   scene.background = new THREE.Color(0x101010);
 
+  //
+
   const light = new THREE.AmbientLight(0xffffff, 1);
   scene.add(light);
+
+  //
 
   camera = new THREE.PerspectiveCamera(
     70,
@@ -34,7 +37,8 @@ function init() {
     2000
   );
   camera.position.z = 0.01;
-  // scene.add(camera);
+
+  //
 
   // Create the panoramic sphere geometery
   const panoSphereGeo = new THREE.SphereGeometry(6, 256, 256);
